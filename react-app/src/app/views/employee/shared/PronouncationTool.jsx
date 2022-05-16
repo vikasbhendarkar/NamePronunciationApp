@@ -101,7 +101,7 @@ const PronounciationTool = (props) => {
                 <Icon style={{color:'red'}}><SettingsVoiceIcon /></Icon>
             </IconButton>
             {
-                (props.data.pronounciation!=="") ? (
+                (props.data.status==="completed") ? (
                     <IconButton onClick={handlePlay}>
                         <Icon color='primary'><VolumeUpIcon /></Icon>
                     </IconButton>
