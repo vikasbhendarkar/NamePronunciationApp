@@ -2,7 +2,7 @@ import base64
 import json
 
 import yaml
-from constant.constant import Constant
+from flask_app.constant.constant import Constant
 
 
 class Utilities:

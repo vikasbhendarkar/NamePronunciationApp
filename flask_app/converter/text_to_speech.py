@@ -4,7 +4,7 @@
 import os
 from io import BytesIO
 
-from constant.constant import Constant
+from flask_app.constant.constant import Constant
 from gtts import gTTS
 import speech_recognition as sr
 
