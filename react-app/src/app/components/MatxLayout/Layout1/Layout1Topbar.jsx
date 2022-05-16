@@ -1,14 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import useAuth from 'app/hooks/useAuth'
-import useSettings from 'app/hooks/useSettings'
+import useAuth from '../../../hooks/useAuth'
+import useSettings from '../../../hooks/useSettings'
 import { styled, useTheme, Box } from '@mui/system'
 import { Span } from '../../../components/Typography'
-import { MatxMenu, MatxSearchBox } from 'app/components'
-import ShoppingCart from '../../ShoppingCart/ShoppingCart'
+import { MatxMenu, MatxSearchBox } from '../../../components'
 import NotificationBar from '../../NotificationBar/NotificationBar'
-import { themeShadows } from 'app/components/MatxTheme/themeColors'
-import { NotificationProvider } from 'app/contexts/NotificationContext'
+import { themeShadows } from '../../../components/MatxTheme/themeColors'
+import { NotificationProvider } from '../../../contexts/NotificationContext'
 import {
     Icon,
     IconButton,
@@ -17,7 +16,7 @@ import {
     useMediaQuery,
     Hidden,
 } from '@mui/material'
-import { topBarHeight } from 'app/utils/constant'
+import { topBarHeight } from '../../../utils/constant'
 
 const StyledIconButton = styled(IconButton)(({ theme }) => ({
     color: theme.palette.text.primary,

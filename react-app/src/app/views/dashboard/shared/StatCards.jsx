@@ -1,7 +1,7 @@
 import React from 'react'
 import { Grid, Card, Icon, IconButton, Tooltip } from '@mui/material'
 import { Box, styled } from '@mui/system'
-import { Small } from 'app/components/Typography'
+import { Small } from '../../../components/Typography'
 
 const StyledCard = styled(Card)(({ theme }) => ({
     display: 'flex',

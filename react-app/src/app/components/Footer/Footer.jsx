@@ -1,9 +1,9 @@
 import React from 'react'
 import { Span, Paragraph } from '../Typography'
-import useSettings from 'app/hooks/useSettings'
+import useSettings from '../../hooks/useSettings'
 import {Toolbar, AppBar, ThemeProvider } from '@mui/material'
 import { styled, useTheme } from '@mui/system'
-import { topBarHeight } from 'app/utils/constant'
+import { topBarHeight } from '../../utils/constant'
 
 const AppFooter = styled(Toolbar)(() => ({
     display: 'flex',

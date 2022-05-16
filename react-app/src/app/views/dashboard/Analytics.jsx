@@ -9,7 +9,7 @@ import UpgradeCard from './shared/UpgradeCard'
 import { styled, useTheme } from '@mui/system'
 import TopSellingTable from './shared/TopSellingTable'
 import { useDispatch, useSelector } from 'react-redux'
-import { getAnalytics } from 'app/redux/actions/EmployeeActions'
+import { getAnalytics } from '../../redux/actions/EmployeeActions'
 
 
 const ContentBox = styled('div')(({ theme }) => ({

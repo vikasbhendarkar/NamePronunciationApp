@@ -10,7 +10,7 @@ import Toolbar from '@mui/material/Toolbar'
 import IconButton from '@mui/material/IconButton'
 import CloseIcon from '@mui/icons-material/Close'
 import Slide from '@mui/material/Slide'
-import { H6 } from 'app/components/Typography'
+import { H6 } from '../components/Typography'
 import { useTheme } from '@mui/system'
 
 const Transition = React.forwardRef(function Transition(props, ref) {

@@ -1,5 +1,5 @@
 import React from 'react'
-import useSettings from 'app/hooks/useSettings'
+import useSettings from '../../hooks/useSettings'
 import { CssBaseline, ThemeProvider } from '@mui/material'
 
 const MatxTheme = ({ children }) => {

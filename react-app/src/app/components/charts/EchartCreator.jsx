@@ -2,7 +2,7 @@ import React from 'react'
 import * as echarts from 'echarts'
 import ReactEcharts from 'echarts-for-react'
 import PropTypes from 'prop-types'
-import { EchartTheme } from 'app/components'
+import { EchartTheme } from '../../components'
 import { useTheme } from '@mui/system'
 
 const EchartCreator = ({ height, option }) => {

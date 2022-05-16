@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, styled } from '@mui/system'
-import { Breadcrumb, SimpleCard } from 'app/components'
+import { Breadcrumb, SimpleCard } from '../../components'
 import { Icon, Button, IconButton, Fab } from '@mui/material'
 
 const AppButtonRoot = styled('div')(({ theme }) => ({

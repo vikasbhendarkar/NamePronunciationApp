@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Divider } from '@mui/material'
-import { convertHexToRGB, getTimeDifference } from 'app/utils/utils'
+import { convertHexToRGB, getTimeDifference } from '../../utils/utils'
 import { H5, Span, Paragraph, Small } from '../Typography'
 import { styled, Box, useTheme } from '@mui/system'
 import { themeShadows } from '../MatxTheme/themeColors'

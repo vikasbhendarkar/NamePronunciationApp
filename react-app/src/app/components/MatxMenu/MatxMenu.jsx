@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import useSettings from 'app/hooks/useSettings'
+import useSettings from '../../hooks/useSettings'
 import { styled, Box } from '@mui/system'
 import { Menu, ThemeProvider } from '@mui/material'
 

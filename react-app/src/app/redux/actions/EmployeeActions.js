@@ -23,7 +23,11 @@ const base64toBlob = (base64string) => {
 export const getEmployeeList = (page, following, rows, filter) => (dispatch) => {
     const start = page*rows + 1
     const end = (page+following)*rows
-    axios.post('http://localhost:8000/api/v1/fetch/speech').then((res) => {
+    axios.get('/api/employee', {
+        start: start,
+        end: end,
+        filter: filter
+    }).then((res) => {
         dispatch({
             type: GET_EMPLOYEE_LIST,
             payload: res.data,

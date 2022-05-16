@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 import React from 'react'
 import { styled, useTheme } from '@mui/system'
-import useSettings from 'app/hooks/useSettings'
+import useSettings from '../../hooks/useSettings'
 import { Fab, IconButton, Icon } from '@mui/material'
 
 const Toggle = styled('div')(() => ({

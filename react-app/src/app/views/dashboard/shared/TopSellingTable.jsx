@@ -1,5 +1,5 @@
 import React from 'react'
-import { Paragraph } from 'app/components/Typography'
+import { Paragraph } from '../../../components/Typography'
 import { Box, styled, useTheme } from '@mui/system'
 import {
     Card,

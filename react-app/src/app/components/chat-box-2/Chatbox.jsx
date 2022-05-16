@@ -1,10 +1,10 @@
 import { H5, H6, Span } from '../Typography'
-import { ChatAvatar } from 'app/components'
+import { ChatAvatar } from '../../components'
 import ScrollBar from 'react-perfect-scrollbar'
 import { Box, styled, useTheme } from '@mui/system'
 import React, { useState, useEffect, useCallback } from 'react'
 import { IconButton, Icon, Divider, TextField, Avatar } from '@mui/material'
-import { convertHexToRGB } from 'app/utils/utils'
+import { convertHexToRGB } from '../../utils/utils'
 
 const ChatContainer = styled('div')(() => ({
     height: '100%',

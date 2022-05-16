@@ -1,5 +1,5 @@
 import React from 'react'
-import { Breadcrumb, SimpleCard } from 'app/components'
+import { Breadcrumb, SimpleCard } from '../../components'
 import AutocompleteCombo from './AutocompleteCombo'
 import AsyncAutocomplete from './AsyncAutocomplete'
 import BadgeAutocomplete from './BadgeAutocomplete'

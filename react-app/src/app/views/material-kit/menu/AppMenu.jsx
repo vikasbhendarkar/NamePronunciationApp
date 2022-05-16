@@ -3,7 +3,7 @@ import SimpleMenu from './SimpleMenu'
 import SelectedMenu from './SelectedMenu'
 import CustomizedMenu from './CustomizedMenu'
 import MaxHeightMenu from './MaxHeightMenu'
-import { Breadcrumb, SimpleCard } from 'app/components'
+import { Breadcrumb, SimpleCard } from '../../components'
 import { Box, styled } from '@mui/system'
 
 const Container = styled('div')(({ theme }) => ({

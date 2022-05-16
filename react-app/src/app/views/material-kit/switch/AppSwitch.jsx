@@ -4,7 +4,7 @@ import LabelledSwitch from './LabelledSwitch'
 import FormGroupSwitch from './FormGroupSwitch'
 import CustomizedSwitch from './CustomizedSwitch'
 import PlacingSwitchLabel from './PlacingSwitchLabel'
-import { Breadcrumb, SimpleCard } from 'app/components'
+import { Breadcrumb, SimpleCard } from '../../components'
 import { Box, styled } from '@mui/system'
 
 const Container = styled('div')(({ theme }) => ({

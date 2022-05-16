@@ -1,18 +1,18 @@
 import { useEffect } from 'react'
-import useAuth from 'app/hooks/useAuth'
+import useAuth from '../../hooks/useAuth'
 import { H6, Small } from '../Typography'
 import { Box, styled, useTheme } from '@mui/system'
 import { useNavigate } from 'react-router-dom'
-import useSettings from 'app/hooks/useSettings'
+import useSettings from '../../hooks/useSettings'
 import React, { Fragment, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { themeShadows } from '../MatxTheme/themeColors'
-import { sideNavWidth, topBarHeight } from 'app/utils/constant'
+import { sideNavWidth, topBarHeight } from '../../utils/constant'
 import {
     getCartList,
     deleteProductFromCart,
     updateCartAmount,
-} from 'app/redux/actions/EcommerceActions'
+} from '../../redux/actions/EcommerceActions'
 import {
     Icon,
     Badge,

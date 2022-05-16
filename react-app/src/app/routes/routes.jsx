@@ -1,8 +1,8 @@
-import AuthGuard from 'app/auth/AuthGuard'
-import NotFound from 'app/views/sessions/NotFound'
-import dashboardRoutes from 'app/views/dashboard/DashboardRoutes'
-import employeeRoutes from 'app/views/employee/EmployeeRoutes'
-import sessionRoutes from 'app/views/sessions/SessionRoutes'
+import AuthGuard from '../auth/AuthGuard'
+import NotFound from '../views/sessions/NotFound'
+import dashboardRoutes from '../views/dashboard/DashboardRoutes'
+import employeeRoutes from '../views/employee/EmployeeRoutes'
+import sessionRoutes from '../views/sessions/SessionRoutes'
 import MatxLayout from '../components/MatxLayout/MatxLayout'
 import { Navigate } from 'react-router-dom'
 

@@ -1,7 +1,7 @@
 import { styled, Box } from '@mui/system'
 import React, { Fragment } from 'react'
 import { NavLink } from 'react-router-dom'
-import useSettings from 'app/hooks/useSettings'
+import useSettings from '../../hooks/useSettings'
 import { Paragraph, Span } from '../Typography'
 import { Icon, ButtonBase } from '@mui/material'
 import MatxVerticalNavExpansionPanel from './MatxVerticalNavExpansionPanel'

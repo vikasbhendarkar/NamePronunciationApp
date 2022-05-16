@@ -3,7 +3,7 @@ import SimpleCheckbox from './SimpleCheckbox'
 import LabelledCheckbox from './LabelledCheckbox'
 import PlacingCheckboxLabel from './PlacingCheckboxLabel'
 import FormGroupCheckbox from './FormGroupCheckbox'
-import { Breadcrumb, SimpleCard } from 'app/components'
+import { Breadcrumb, SimpleCard } from '../../components'
 import { Box, styled } from '@mui/system'
 
 const Container = styled('div')(({ theme }) => ({

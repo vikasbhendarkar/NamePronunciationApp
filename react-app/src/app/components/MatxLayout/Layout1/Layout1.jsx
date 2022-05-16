@@ -1,15 +1,15 @@
 import Footer from '../../Footer/Footer'
 import Layout1Topbar from './Layout1Topbar'
-import { MatxSuspense } from 'app/components'
+import { MatxSuspense } from '../../../components'
 import Layout1Sidenav from './Layout1Sidenav'
 import Scrollbar from 'react-perfect-scrollbar'
-import useSettings from 'app/hooks/useSettings'
+import useSettings from '../../../hooks/useSettings'
 import { styled, Box, useTheme } from '@mui/system'
 import React, { useEffect, useRef } from 'react'
 import { ThemeProvider, useMediaQuery } from '@mui/material'
 import SidenavTheme from '../../MatxTheme/SidenavTheme/SidenavTheme'
 import SecondarySidebar from '../../SecondarySidebar/SecondarySidebar'
-import { sidenavCompactWidth, sideNavWidth } from 'app/utils/constant'
+import { sidenavCompactWidth, sideNavWidth } from '../../../utils/constant'
 import { Outlet } from 'react-router-dom'
 
 const Layout1Root = styled(Box)(({ theme }) => ({

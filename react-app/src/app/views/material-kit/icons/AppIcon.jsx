@@ -1,6 +1,6 @@
 import React from 'react'
 import { Icon, Tooltip } from '@mui/material'
-import { Breadcrumb, SimpleCard } from 'app/components'
+import { Breadcrumb, SimpleCard } from '../../components'
 import { Box, styled } from '@mui/system'
 
 const Container = styled('div')(({ theme }) => ({

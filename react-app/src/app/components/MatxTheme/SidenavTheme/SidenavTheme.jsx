@@ -1,5 +1,5 @@
 import React from 'react'
-import useSettings from 'app/hooks/useSettings'
+import useSettings from '../../../hooks/useSettings'
 import { ThemeProvider, useTheme } from '@mui/material'
 
 const SidenavTheme = ({ children }) => {

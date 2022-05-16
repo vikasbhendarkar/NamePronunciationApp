@@ -1,7 +1,7 @@
 import { H5, Span } from '../Typography'
 import BadgeSelected from './BadgeSelected'
 import Scrollbar from 'react-perfect-scrollbar'
-import useSettings from 'app/hooks/useSettings'
+import useSettings from '../../hooks/useSettings'
 import React, { Fragment, useState } from 'react'
 import { styled, Box, useTheme } from '@mui/system'
 import { themeShadows } from '../MatxTheme/themeColors'

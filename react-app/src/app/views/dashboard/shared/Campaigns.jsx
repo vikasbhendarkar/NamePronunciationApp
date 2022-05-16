@@ -1,7 +1,7 @@
 import React from 'react'
-import { Small } from 'app/components/Typography'
+import { Small } from '../../../components/Typography'
 import { Box, useTheme } from '@mui/system'
-import { SimpleCard, MatxProgressBar } from 'app/components'
+import { SimpleCard, MatxProgressBar } from '../../../components'
 
 const Campaigns = () => {
     const theme = useTheme()

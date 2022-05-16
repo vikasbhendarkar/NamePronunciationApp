@@ -1,5 +1,5 @@
 import React, { lazy } from 'react'
-import Loadable from 'app/components/Loadable/Loadable'
+import Loadable from '../../components/Loadable/Loadable'
 import { authRoles } from '../../auth/authRoles'
 
 const Analytics = Loadable(lazy(() => import('./Analytics')))

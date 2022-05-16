@@ -1,7 +1,7 @@
 import React from 'react'
 import { Icon } from '@mui/material'
 import { styled, lighten, useTheme } from '@mui/system'
-import { convertHexToRGB } from 'app/utils/utils'
+import { convertHexToRGB } from '../../utils/utils'
 
 const RectangleRoot = styled('div')(({ theme, color }) => ({
     opacity: 1,
