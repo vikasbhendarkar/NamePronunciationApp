@@ -10,7 +10,12 @@ const initialState = []
 const EmployeeReducer = function (state = initialState, action) {
     switch(action.type) {
         case GET_EMPLOYEE_LIST: {
-            return [...action.payload]
+            const employeeList = []
+            for(const keys in action.payload.response.result) {
+                employeeList.push(action.payload.response.result[keys])
+            }
+            
+            return employeeList
         }
         case UPDATE_EMPLOYEE_RECORDING: {
             return [...state]
