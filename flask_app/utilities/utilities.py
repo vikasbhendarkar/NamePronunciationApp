@@ -50,11 +50,24 @@ class Utilities:
         return config
 
     @staticmethod
-    def encode(message):
-        base64_bytes = base64.b64encode(message)
-        return base64_bytes
+    def decode(message):
+        message_bytes = message.encode("ascii")
+        base64_bytes = base64.b64encode(message_bytes)
+        return base64_bytes.decode("ascii")
 
     @staticmethod
-    def decode(message):
-        message_bytes = base64.b64decode(message)
-        return message_bytes
+    def encode(message):
+        base64_bytes = message.encode("utf-8")
+        message_bytes = base64.b64decode(base64_bytes)
+        return message_bytes.decode("utf-8")
+
+    @staticmethod
+    def decode_voice(message):
+        return base64.b64decode(message)
+
+    @staticmethod
+    def encode_voice(message):
+        return base64.b64encode(message)
+
+if __name__ == "__main__":
+    print(Utilities.decode('Hackathon22!'))
