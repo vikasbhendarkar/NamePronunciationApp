@@ -66,7 +66,6 @@ const SearchBar = () => {
     return (
         <Grid container spacing={2}>
             <Grid item>
-                Search bar
             </Grid>
         </Grid>
     )
