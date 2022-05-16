@@ -1,57 +1,89 @@
-from flask import Flask, request, jsonify
-from flask_app.storage import insert_calculation, get_calculations
+import json
 
-app = Flask(__name__)
+from flask import Flask, jsonify, make_response
+from objdict import ObjDict
 
-@app.route('/')
-def index():
-    return "My Addition App", 200
+from routes import api
 
-@app.route('/health')
-def health():
-    return '', 200
-
-@app.route('/ready')
-def ready():
-    return '', 200
-
-@app.route('/data', methods=['GET'])
-def data():
-    '''
-        Function used to get calculations history
-        from Postgres database and return to fetch call in frontend.
-    :return: Json format of either collected calculations or error message
-    '''
-
-    calculations_history = []
-
-    try:
-        calculations = get_calculations()
-        for key, value in calculations.items():
-            calculations_history.append(value)
-    
-        return jsonify({'calculations': calculations_history}), 200
-    except:
-        return jsonify({'error': 'error fetching calculations history'}), 500
-
-@app.route('/insert_nums', methods=['POST'])
-def insert_nums():
-    '''
-        Function used to insert a calculation into our postgres
-        DB. Operands of operation received from frontend.
-    :return: Json format of either success or failure response.
-    '''
-
-    insert_nums = request.get_json()
-    firstNum, secondNum, answer = insert_nums['firstNum'], insert_nums['secondNum'], insert_nums['answer']
-
-    try:
-        insert_calculation(firstNum, secondNum, answer)
-        return jsonify({'Response': 'Successfully inserted into DB'}), 200
-    except:
-        return jsonify({'Response': 'Unable to insert into DB'}), 500
+APP = Flask(__name__)
+APP.config["DEBUG"] = True
+APP.config["JSON_SORT_KEYS"] = False
+APP.secret_key = "(!TsPpOrTaL@)"
 
 
+APP.register_blueprint(api.get_blueprint())
 
 
-        
+@APP.errorhandler(400)
+def handle_400_error(_error):
+    """Return a http 400 error to client"""
+    dataDict = ObjDict()
+    dataDict.status = False
+    dataDict.result = "Misunderstood"
+    # Serializing json
+    json_object = json.dumps(dataDict)
+    json_object = json.loads(json_object)
+    return make_response(jsonify({"response": json_object}), 400)
+
+
+@APP.errorhandler(401)
+def handle_401_error(_error):
+    """Return a http 401 error to client"""
+    dataDict = ObjDict()
+    dataDict.status = False
+    dataDict.result = "Unauthorised"
+    # Serializing json
+    json_object = json.dumps(dataDict)
+    json_object = json.loads(json_object)
+    return make_response(jsonify({"response": json_object}), 401)
+
+
+@APP.errorhandler(404)
+def handle_404_error(_error):
+    """Return a http 404 error to client"""
+    dataDict = ObjDict()
+    dataDict.status = False
+    dataDict.result = "URL not found"
+    # Serializing json
+    json_object = json.dumps(dataDict)
+    json_object = json.loads(json_object)
+    return make_response(jsonify({"response": json_object}), 404)
+
+
+@APP.errorhandler(500)
+def handle_500_error(_error):
+    """Return a http 500 error to client"""
+    dataDict = ObjDict()
+    dataDict.status = False
+    dataDict.result = "Server error. Please try after sometimes."
+    # Serializing json
+    json_object = json.dumps(dataDict)
+    json_object = json.loads(json_object)
+    return make_response(jsonify({"response": json_object}), 500)
+
+
+@APP.errorhandler(405)
+def handle_405_error(_error):
+    """Return a http 405 error to client"""
+    dataDict = ObjDict()
+    dataDict.status = False
+    dataDict.result = "Method not allowed"
+    # Serializing json
+    json_object = json.dumps(dataDict)
+    json_object = json.loads(json_object)
+    return make_response(jsonify({"response": json_object}), 405)
+
+
+@APP.errorhandler(Exception)
+def all_exception_handler(_error):
+    dataDict = ObjDict()
+    dataDict.status = False
+    dataDict.result = _error.args[0]
+    # Serializing json
+    json_object = json.dumps(dataDict)
+    json_object = json.loads(json_object)
+    return make_response(jsonify({"response": json_object}), 500)
+
+
+if __name__ == "__main__":
+    APP.run(host="localhost", port=5002, use_reloader=False, threaded=True)
