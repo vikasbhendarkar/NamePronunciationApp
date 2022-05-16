@@ -33,10 +33,19 @@ class Utilities:
 
         # Based on jsonify object
         # return object
+        temp_obj = None
         if jsonifyObj is None:
-            return json_object
+            temp_obj =  json_object
         else:
-            return jsonifyObj({"response": json_object})
+            temp_obj = jsonifyObj({"response": json_object})
+
+        temp_obj.headers.add('Access-Control-Allow-Origin', '*')
+        temp_obj.headers.add("Access-Control-Allow-Headers", "*")
+        temp_obj.headers.add("Access-Control-Allow-Methods", "*")
+        return temp_obj
+
+
+        
 
     @staticmethod
     def readConfig(configPath):
