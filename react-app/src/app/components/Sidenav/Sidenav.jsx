@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react'
 import Scrollbar from 'react-perfect-scrollbar'
-import { navigations } from 'app/navigations'
-import { MatxVerticalNav } from 'app/components'
-import useSettings from 'app/hooks/useSettings'
+import { navigations } from '../../navigations'
+import { MatxVerticalNav } from '../../components'
+import useSettings from '../../hooks/useSettings'
 import { styled } from '@mui/system'
 
 const StyledScrollBar = styled(Scrollbar)(() => ({

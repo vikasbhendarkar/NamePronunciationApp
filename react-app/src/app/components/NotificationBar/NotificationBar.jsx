@@ -2,9 +2,9 @@ import React, { Fragment } from 'react'
 import { Link } from 'react-router-dom'
 import { Small, Paragraph } from '../Typography'
 import { themeShadows } from '../MatxTheme/themeColors'
-import { getTimeDifference } from 'app/utils/utils.js'
-import useSettings from 'app/hooks/useSettings'
-import useNotification from 'app/hooks/useNotification'
+import { getTimeDifference } from '../../utils/utils.js'
+import useSettings from '../../hooks/useSettings'
+import useNotification from '../../hooks/useNotification'
 import { styled, Box, useTheme } from '@mui/system'
 import {
     Icon,
@@ -15,7 +15,7 @@ import {
     Drawer,
     ThemeProvider,
 } from '@mui/material'
-import { sideNavWidth, topBarHeight } from 'app/utils/constant'
+import { sideNavWidth, topBarHeight } from '../../utils/constant'
 
 const Notification = styled('div')(() => ({
     padding: '16px',

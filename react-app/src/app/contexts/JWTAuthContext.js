@@ -1,7 +1,7 @@
 import React, { createContext, useEffect, useReducer } from 'react'
 import jwtDecode from 'jwt-decode'
-import axios from 'axios.js'
-import { MatxLoading } from 'app/components'
+import axios from '../../axios'
+import { MatxLoading } from '../components'
 
 const initialState = {
     isAuthenticated: false,

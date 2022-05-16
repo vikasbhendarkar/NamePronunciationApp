@@ -2,7 +2,7 @@ import React from 'react'
 import SimpleRadio from './SimpleRadio'
 import StandaloneRadio from './StandaloneRadio'
 import PlacingRadioLabel from './PlacingRadioLabel'
-import { Breadcrumb, SimpleCard } from 'app/components'
+import { Breadcrumb, SimpleCard } from '../../components'
 import { Box, styled } from '@mui/system'
 
 const Container = styled('div')(({ theme }) => ({

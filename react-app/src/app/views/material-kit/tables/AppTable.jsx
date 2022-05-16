@@ -1,7 +1,7 @@
 import React from 'react'
 import SimpleTable from './SimpleTable'
 import PaginationTable from './PaginationTable'
-import { Breadcrumb, SimpleCard } from 'app/components'
+import { Breadcrumb, SimpleCard } from '../../components'
 import { Box, styled } from '@mui/system'
 
 const Container = styled('div')(({ theme }) => ({

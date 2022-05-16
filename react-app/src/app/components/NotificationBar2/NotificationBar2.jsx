@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import useSettings from 'app/hooks/useSettings'
+import useSettings from '../../hooks/useSettings'
 import NotificationCard from './NotificationCard'
 import { styled, useTheme, Box } from '@mui/system'
 import { useDispatch, useSelector } from 'react-redux'

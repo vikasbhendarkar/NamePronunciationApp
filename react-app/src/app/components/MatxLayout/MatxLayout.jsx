@@ -1,7 +1,7 @@
 import React from 'react'
 import { MatxLayouts } from './index'
-import { MatxSuspense } from 'app/components'
-import useSettings from 'app/hooks/useSettings'
+import { MatxSuspense } from '../../components'
+import useSettings from '../../hooks/useSettings'
 
 const MatxLayout = (props) => {
     const { settings } = useSettings()

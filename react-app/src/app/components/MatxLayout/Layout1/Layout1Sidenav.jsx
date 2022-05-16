@@ -1,12 +1,12 @@
 import React from 'react'
 import Brand from '../../Brand/Brand'
-import { convertHexToRGB } from 'app/utils/utils'
+import { convertHexToRGB } from '../../../utils/utils'
 import { Box, styled, useTheme } from '@mui/system'
 import Sidenav from '../../Sidenav/Sidenav'
-import useSettings from 'app/hooks/useSettings'
+import useSettings from '../../../hooks/useSettings'
 import { Switch, Hidden } from '@mui/material'
-import { themeShadows } from 'app/components/MatxTheme/themeColors'
-import { sidenavCompactWidth, sideNavWidth } from 'app/utils/constant'
+import { themeShadows } from '../../../components/MatxTheme/themeColors'
+import { sidenavCompactWidth, sideNavWidth } from '../../../utils/constant'
 
 const SidebarNavRoot = styled(Box)(({ theme, width, primaryBg, bgImgURL }) => ({
     position: 'fixed',

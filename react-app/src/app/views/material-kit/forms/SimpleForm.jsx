@@ -8,7 +8,7 @@ import {
     Checkbox,
 } from '@mui/material'
 import { styled } from '@mui/system'
-import { Span } from 'app/components/Typography'
+import { Span } from '../components/Typography'
 import React, { useState, useEffect } from 'react'
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator'
 import AdapterDateFns from '@mui/lab/AdapterDateFns'

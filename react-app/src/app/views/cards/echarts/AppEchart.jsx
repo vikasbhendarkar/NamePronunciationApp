@@ -4,8 +4,8 @@ import AreaChart from './AreaChart'
 import { useTheme, Box, styled } from '@mui/system'
 import DoughnutChart from './Doughnut'
 import ComparisonChart from './ComparisonChart'
-import SimpleCard from 'app/components/cards/SimpleCard'
-import Breadcrumb from 'app/components/Breadcrumb/Breadcrumb'
+import SimpleCard from '../components/cards/SimpleCard'
+import Breadcrumb from '../components/Breadcrumb/Breadcrumb'
 
 const Container = styled('div')(({ theme }) => ({
     margin: '30px',

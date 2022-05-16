@@ -1,5 +1,5 @@
 import React, { lazy } from 'react'
-import Loadable from 'app/components/Loadable/Loadable';
+import Loadable from '../../components/Loadable/Loadable';
 
 const NotFound = Loadable(lazy(() => import("./NotFound")));
 const ForgotPassword = Loadable(lazy(() => import("./ForgotPassword")));

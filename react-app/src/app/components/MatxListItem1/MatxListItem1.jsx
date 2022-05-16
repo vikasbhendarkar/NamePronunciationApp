@@ -3,7 +3,7 @@ import { Small } from '../Typography'
 import { Box, styled, useTheme } from '@mui/system'
 import { IconButton, Icon } from '@mui/material'
 import RectangleAvatar from '../RectangleAvatar/RectangleAvatar'
-import { convertHexToRGB } from 'app/utils/utils'
+import { convertHexToRGB } from '../../utils/utils'
 
 const ItemContainer = styled('div')(() => ({
     display: 'flex',

@@ -1,6 +1,6 @@
 import { format } from 'date-fns'
 import React, { Fragment } from 'react'
-import { Span } from 'app/components/Typography'
+import { Span } from '../../../components/Typography'
 import { Box, styled, useTheme } from '@mui/system'
 import {
     Grid,

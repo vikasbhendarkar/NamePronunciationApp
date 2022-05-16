@@ -1,5 +1,5 @@
 import React from 'react'
-import { Breadcrumb, SimpleCard } from 'app/components'
+import { Breadcrumb, SimpleCard } from '../../components'
 import SimpleDialogDemo from './SimpleDialog'
 import AlertDialog from './SimpleAlerts'
 import AlertDialogSlide from './DialogTransition'

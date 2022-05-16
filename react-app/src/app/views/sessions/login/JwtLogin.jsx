@@ -7,11 +7,11 @@ import {
     FormControlLabel,
 } from '@mui/material'
 import React, { useState } from 'react'
-import useAuth from 'app/hooks/useAuth'
+import useAuth from '../../../hooks/useAuth'
 import { useNavigate } from 'react-router-dom'
 import { Box, styled, useTheme } from '@mui/system'
 import { TextValidator, ValidatorForm } from 'react-material-ui-form-validator'
-import { Paragraph, Span } from 'app/components/Typography'
+import { Paragraph, Span } from '../../../components/Typography'
 
 const FlexBox = styled(Box)(() => ({
     display: 'flex',

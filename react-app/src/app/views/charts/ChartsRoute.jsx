@@ -1,6 +1,6 @@
 import React, { lazy } from 'react'
-import Loadable from 'app/components/Loadable/Loadable'
-import { authRoles } from 'app/auth/authRoles'
+import Loadable from '../../components/Loadable/Loadable'
+import { authRoles } from '../auth/authRoles'
 
 const AppEchart = Loadable(lazy(() => import('./echarts/AppEchart')))
 

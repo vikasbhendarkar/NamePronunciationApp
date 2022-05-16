@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Paragraph } from 'app/components/Typography'
+import { Paragraph } from '../../../components/Typography'
 import { Box, styled, useTheme } from '@mui/system'
 import { useDispatch, useSelector } from 'react-redux'
 import {
@@ -15,7 +15,7 @@ import {
     TablePagination,
     Grid
 } from '@mui/material'
-import { getEmployeeList } from 'app/redux/actions/EmployeeActions'
+import { getEmployeeList } from '../../../redux/actions/EmployeeActions'
 import PronounciationTool from './PronouncationTool'
 
 const CardHeader = styled('div')(() => ({
@@ -66,6 +66,7 @@ const SearchBar = () => {
     return (
         <Grid container spacing={2}>
             <Grid item>
+                Search bar
             </Grid>
         </Grid>
     )

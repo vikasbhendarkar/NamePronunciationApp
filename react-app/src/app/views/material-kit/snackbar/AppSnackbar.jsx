@@ -1,5 +1,5 @@
 import React from 'react'
-import { Breadcrumb, SimpleCard } from 'app/components'
+import { Breadcrumb, SimpleCard } from '../../components'
 import SimpleSnackbar from './SimpleSnackbar'
 import CustomizedSnackbars from './CustomizedSnackbar'
 import PositionedSnackbar from './PositionedSnackbar'
