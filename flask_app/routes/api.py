@@ -139,7 +139,6 @@ def storeSpeech():
     voice = Utilities.isParameterEmpty(param, 'pronounciation', dictResp)
     if voice is None:
         logger.error('pronounciation' + Constant.ERROR_MESSAGE)
-        return Utilities.prepareResonpe(dataDict, dictResp, flag, jsonify)
     
     try:
         res = Main.getInstance().store_speech(uName, voice, param)
