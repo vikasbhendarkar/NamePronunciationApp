@@ -1,6 +1,6 @@
 
-from converter.text_to_speech import TextToSpeech
-from logger.logger import exc_logger, logger
+from flask_app.converter.text_to_speech import TextToSpeech
+from flask_app.logger.logger import exc_logger, logger
 
 
 

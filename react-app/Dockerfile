@@ -1,5 +1,5 @@
 # first building react project, using node base image
-FROM node:10 as build-stage
+FROM node:16 as build-stage
 
 # setting working dir inside container
 WORKDIR /react-app

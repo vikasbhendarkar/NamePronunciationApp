@@ -1,9 +1,9 @@
 from flask import Blueprint, jsonify, request, Response
-from constant.constant import Constant
-from logger.logger import exc_logger, logger
+from flask_app.constant.constant import Constant
+from flask_app.logger.logger import exc_logger, logger
 from objdict import ObjDict
-from main import Main
-from utilities.utilities import Utilities
+from flask_app.main import Main
+from flask_app.utilities.utilities import Utilities
 
 app = Blueprint('api', __name__)
 

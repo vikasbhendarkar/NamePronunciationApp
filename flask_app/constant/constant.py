@@ -9,6 +9,6 @@ class Constant:
     ERROR_EMPTY_MESSAGE = " parameter is empty."
     INFO_MESSAGE = "Request Id : "
     RESOURCE_PATH = "resource"
-    LOGGER_PATH = '{0}/log/config.yaml'
-    AUDIO_PATH = 'audio/{0}'
+    LOGGER_PATH = '{0}\\log\\config.yaml'
+    AUDIO_PATH = 'audio\\{0}'
     VOICE_NAME = 'voice.webm'
