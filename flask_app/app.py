@@ -3,6 +3,7 @@ from gevent.pywsgi import WSGIServer
 
 from flask import Flask, jsonify, make_response
 from objdict import ObjDict
+from flask_cors import CORS
 
 from flask_app.routes import api
 
@@ -14,6 +15,7 @@ app.secret_key = "(!TsPpOrTaL@)"
 
 app.register_blueprint(api.get_blueprint())
 
+CORS(app)
 
 @app.errorhandler(400)
 def handle_400_error(_error):

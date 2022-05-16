@@ -12,15 +12,6 @@ def get_blueprint():
     """Return the blueprint for the main app module"""
     return app
 
-# put this sippet ahead of all your bluprints
-# blueprint can also be app~~
-@app.after_request 
-def after_request(response):
-    response.headers.add("Access-Control-Allow-Origin", "*")
-    response.headers.add("Access-Control-Allow-Headers", "*")
-    response.headers.add("Access-Control-Allow-Methods", "*")
-    # Other headers can be added here if needed
-    return response
 
 @app.route('/')
 def init():
