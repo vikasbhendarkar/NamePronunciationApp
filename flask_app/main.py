@@ -33,3 +33,6 @@ class Main:
 
     def store_speech(self, uName, voice, param):
         return FetchSpeech(self).store_speech(uName, voice, param)
+
+    def update_speech(self, uName, voice):
+        return FetchSpeech(self).update_speech(uName, voice)

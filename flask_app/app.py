@@ -84,16 +84,4 @@ def all_exception_handler(_error):
     json_object = json.dumps(dataDict)
     json_object = json.loads(json_object)
     return make_response(jsonify({"response": json_object}), 500)
-
-
-def main():
-    # use gevent WSGI server instead of the Flask
-    # instead of 5000, you can define whatever port you want.
-    http = WSGIServer(('localhost', 5002), app.wsgi_app)
-    http.environ['wsgi.multithread'] = True
-
-    # Serve your application
-    http.serve_forever()
-
-if __name__ == "__main__":
-    main()
+    

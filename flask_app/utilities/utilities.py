@@ -1,5 +1,7 @@
 import base64
 import json
+import os
+import flask_app
 
 import yaml
 from flask_app.constant.constant import Constant
@@ -42,16 +44,15 @@ class Utilities:
         temp_obj.headers.add('Access-Control-Allow-Origin', '*')
         temp_obj.headers.add("Access-Control-Allow-Headers", "*")
         temp_obj.headers.add("Access-Control-Allow-Methods", "*")
-        return temp_obj
-
-
-        
+        return temp_obj        
 
     @staticmethod
     def readConfig(configPath):
+        PATH = os.path.dirname(flask_app.__file__)
+        conf = os.path.join(PATH, configPath)
         config = None
         try:
-            with open(configPath, "r") as f:
+            with open(conf, "r") as f:
                 config = yaml.safe_load(f.read())
         except Exception:
             config = None

@@ -5,6 +5,7 @@ from flask_app.create_dict.create_dict import create_dict
 class FetchSpeech:
     
     __FETCH_ALL_SPEECH_QUERY = "SELECT * FROM employee"
+    __UPDATE_SPEECH_QUERY = "UPDATE employee SET pronounciation = '{0}' WHERE eid = '{1}'"
     __FETCH_SPEECH_QUERY = "SELECT * FROM employee WHERE eid = '{0}'"
     __INSERT_SPEECH_QUERY = 'INSERT INTO employee (eid, uid, fname, lname, preferred_name, pronounciation, status) VALUES (%s, %s, %s, %s, %s, %s, %s) '
 
@@ -37,3 +38,7 @@ class FetchSpeech:
             index = index + 1
 
         return mydict
+
+    def update_speech(self, uName, voice):
+        self.obj.database.execute(FetchSpeech.__UPDATE_SPEECH_QUERY.format(voice, uName))
+        return 'Update data successfully.'
