@@ -1,4 +1,5 @@
 import json
+from gevent.pywsgi import WSGIServer
 
 from flask import Flask, jsonify, make_response
 from objdict import ObjDict
@@ -85,5 +86,14 @@ def all_exception_handler(_error):
     return make_response(jsonify({"response": json_object}), 500)
 
 
-# if __name__ == "__main__":
-#     app.run(host="localhost", port=5002, use_reloader=False, threaded=True)
+def main():
+    # use gevent WSGI server instead of the Flask
+    # instead of 5000, you can define whatever port you want.
+    http = WSGIServer(('localhost', 5002), app.wsgi_app)
+    http.environ['wsgi.multithread'] = True
+
+    # Serve your application
+    http.serve_forever()
+
+if __name__ == "__main__":
+    main()

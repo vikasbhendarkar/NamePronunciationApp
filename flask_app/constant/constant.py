@@ -12,3 +12,5 @@ class Constant:
     LOGGER_PATH = '{0}\\log\\config.yaml'
     AUDIO_PATH = 'audio\\{0}'
     VOICE_NAME = 'voice.webm'
+    DATABASE_SOURCE = 'Production'
+    DATABASE_CONFIG_PATH = "{0}/Database/config.yml"
