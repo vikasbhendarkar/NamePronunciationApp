@@ -159,3 +159,35 @@ def storeSpeech():
         logger.error(str(e))
 
     return Utilities.prepareResonpe(dataDict, dictResp, flag, jsonify)
+
+@app.route('/api/v1/update/speech', methods = ['POST'])
+def updateSpeech():
+    dataDict, dictResp, flag = ObjDict(), {}, False
+
+    logger.info(f'{Constant.PROJECT_NAME} - execute update speech Api')
+
+    # post parameter send by client
+    param = request.get_json(silent=True)
+
+    # Validate User Name
+    uName = Utilities.isParameterEmpty(param, 'uid', dictResp)
+    if uName is None:
+        logger.error('uid' + Constant.ERROR_MESSAGE)
+        return Utilities.prepareResonpe(dataDict, dictResp, flag, jsonify)
+
+    # Validate User Name
+    voice = Utilities.isParameterEmpty(param, 'pronounciation', dictResp)
+    if voice is None:
+        logger.error('pronounciation' + Constant.ERROR_MESSAGE)
+        return Utilities.prepareResonpe(dataDict, dictResp, flag, jsonify)
+    
+    
+    try:
+        res = Main.getInstance().update_speech(uName, voice)
+        dictResp['result'] = res
+        flag = True
+    except Exception as e:
+        dictResp['result'] = str(e)
+        logger.error(str(e))
+
+    return Utilities.prepareResonpe(dataDict, dictResp, flag, jsonify)

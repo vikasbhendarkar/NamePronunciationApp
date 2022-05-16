@@ -6,7 +6,6 @@ import flask_app
 from flask_app.constant.constant import Constant
 
 PATH = os.path.dirname(flask_app.__file__)
-
 conf = os.path.join(PATH, Constant.LOGGER_PATH.format(Constant.RESOURCE_PATH))
 
 with open(conf, "r") as f:

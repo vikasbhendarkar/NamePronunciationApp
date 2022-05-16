@@ -20,7 +20,7 @@ handlers:
         class: logging.handlers.TimedRotatingFileHandler
         level: DEBUG
         formatter: detailed
-        filename: logs/access.log
+        filename: flask_app/logs/access.log
         backupCount: 30
         encoding: utf8
         when: midnight
@@ -30,7 +30,7 @@ handlers:
         class: logging.handlers.TimedRotatingFileHandler
         level: ERROR
         formatter: detailed
-        filename: logs/exception.log
+        filename: flask_app/logs/exception.log
         backupCount: 30
         encoding: utf8
         when: midnight
