@@ -2,19 +2,9 @@
 
 # dependencies
 /node_modules
+/docs/node_modules
 /.pnp
 .pnp.js
-.venv
-.installed.cfg
-bin
-develop-eggs
-dist
-downloads
-eggs
-parts
-src/*.egg-info
-lib
-lib64
 
 # testing
 /coverage
@@ -23,6 +13,7 @@ lib64
 /build
 
 # misc
+.eslintcache
 .DS_Store
 .env.local
 .env.development.local
