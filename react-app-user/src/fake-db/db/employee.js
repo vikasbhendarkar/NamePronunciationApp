@@ -62,6 +62,7 @@ Mock.onPost('/api/employee/update').reply((config) => {
     const data = JSON.parse(config.data)
     const eid = data.eid
     const audiodata = data.file
+    console.log("audio data", audiodata)
     const employee = employeeDB.employee.find((emp)=> emp.eid === eid)
     employee["pronounciation"] = audiodata
     employee["status"] = "completed"
