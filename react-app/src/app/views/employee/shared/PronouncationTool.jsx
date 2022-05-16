@@ -51,6 +51,7 @@ const PronounciationTool = (props) => {
     }
 
     const handlePlay = () => {
+        console.log("props data", props.data)
         const binary = convertDataURIToBinary(props.data.pronounciation)
         const audio = new Blob([binary], {type: 'audio/webm'})
         const url = URL.createObjectURL(audio)

@@ -32,8 +32,8 @@ export const getEmployeeList = (page, following, rows, filter) => (dispatch) => 
 }
 
 export const getRecording = (eid) => (dispatch) => {
-    axios.get('/api/employee/recording', {
-        eid: eid
+    axios.post('http://localhost:8000/api/v1/fetch/speech', {
+        uid: eid
     }).then((res) => {
         dispatch({
             type: GET_EMPLOYEE_RECORDING,
@@ -60,10 +60,10 @@ export const updateEmployeeRecording = (eid, recording_data) => (dispatch) => {
         //console.log("base 64 data ", base64data)
         file = base64data
     }).then(() => {
-        axios.post('/api/employee/update', {
-            eid: eid,
-            blob: recording_data,
-            file: file
+
+        axios.post('http://localhost:8000/api/v1/update/speech', {
+            uid: eid,
+            pronounciation: file
         }).then((res) => {
             dispatch({
                 type: UPDATE_EMPLOYEE_RECORDING,
